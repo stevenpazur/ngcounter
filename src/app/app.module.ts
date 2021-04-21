@@ -7,7 +7,7 @@ import { CounterListComponent } from './CounterList/CounterList.component';
 import { CounterDetailComponent } from './CounterDetail/CounterDetail.component';
 
 @NgModule({
-  declarations: [		
+  declarations: [
     AppComponent,
       CounterListComponent,
       CounterDetailComponent

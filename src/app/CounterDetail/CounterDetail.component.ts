@@ -1,11 +1,10 @@
-import { Input } from '@angular/core';
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Counter } from '../Counter';
 
 @Component({
   selector: 'app-CounterDetail',
   templateUrl: './CounterDetail.component.html',
-  styleUrls: ['./CounterDetail.component.css']
+  styleUrls: ['./CounterDetail.component.scss']
 })
 export class CounterDetailComponent implements OnInit {
 
@@ -14,6 +13,10 @@ export class CounterDetailComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.querySelector('input').disabled = true;
+  }
+
+  availability(){
   }
 
 }

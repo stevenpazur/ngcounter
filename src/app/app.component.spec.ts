@@ -1,5 +1,6 @@
-import { TestBed, async } from '@angular/core/testing';
+import { TestBed, async, fakeAsync, tick } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import { CounterListComponent } from './CounterList/CounterList.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -30,9 +31,16 @@ describe('AppComponent', () => {
   });
 
   it("button", () => {
-    const fixture = TestBed.createComponent(AppComponent);
+    const fixture = TestBed.createComponent(CounterListComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('button').innerHTML).toEqual(" Create ");
+  });
+
+  it("renders a counter list", () => {
+    // const fixture = TestBed.createComponent(CounterListComponent);
+    // fixture.detectChanges();
+    // const compiled = fixture.debugElement.nativeElement;
+    // expect(compiled.querySelector('app-CounterList').textContent).toContain("");
   });
 });
